@@ -51,6 +51,9 @@ sr.reveal('.heading', {origin: 'top'});
 sr.reveal('.skills', {origin: 'top'});
 sr.reveal('.skills-content', {origin: 'bottom'});
 sr.reveal('.projects-content', {origin: 'bottom'});
+sr.reveal('.service-box', {origin: 'bottom'});
+sr.reveal('.timeline', {origin: 'bottom'});
+sr.reveal('.timeline-box', {origin: 'bottom'});
 sr.reveal('form', {origin: 'bottom'});
 
 // typadd.js
@@ -63,31 +66,23 @@ var typed = new Typed('.typing', {
 
 
 // contact form
-const scriptURL = 'https://script.google.com/macros/s/AKf ... 6/exec'
-const form = document.forms['submit-to-google-sheet']
-//name, email, mobile number, email subject, message
-const name = document.getElementById('name');
-const email = document.getElementById('email');
-const mobile = document.getElementById('mobile');
-const subject = document.getElementById('subject');
-const message = document.getElementById('message');
+const scriptURL = 'https://smtpjs.com/v3/smtp.js'
 
-form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => alert("Message sent successfully!"))
-        .catch(error => console.error('Error!', error.message))
-})
-
-// contact form validation
-function validateForm() {
-    var x = document.forms["submit-to-google-sheet"]["name"].value;
-    var y = document.forms["submit-to-google-sheet"]["email"].value;
-    var z = document.forms["submit-to-google-sheet"]["mobile"].value;
-    var a = document.forms["submit-to-google-sheet"]["subject"].value;
-    var b = document.forms["submit-to-google-sheet"]["message"].value;
-    if (x == "" || y == "" || z == "" || a == "" || b == "") {
-        alert("All fields must be filled out");
-        return false;
-    }
+function sendEmail() {
+    Email.send({
+        Host : "smtp.gmail.com",
+        Username : "saylihidayatrusdy@gmail.com",
+        Password : "16081999Il",
+        To : 'ilyas@undiksha.ac.id',
+        From : document.getElementById('email').value,
+        Subject : "This is the subject",
+        Body : "And this is the body"
+    }).then(
+      message => alert(message)
+    );
 }
+
+// form.addEventListener('submit', (e) => {
+//     e.preventDefault();
+//     sendEmail();
+// });
