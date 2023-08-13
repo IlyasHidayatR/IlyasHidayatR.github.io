@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Portofolio</title>
+        <title>Ilyas Hidayat Rusdy</title>
+        <link rel="icon" href="media/portfolio.png" type="image/png">
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -206,14 +207,14 @@
         <section class="contact" id="contact">
             <h2 class="heading">Contact <span>Me</span></h2>
 
-            <form onsubmit="sendEmail(); reset(); return false;">
+            <form onsubmit="sendWhastapp(); reset(); return false;">
                 <div class="input-box">
                     <input type="text" name="name" id="name" placeholder="Name">
                     <input type="email" name="email" id="email" placeholder="Email">
                 </div>
                 <div class="input-box">
-                    <input type="number" name="number" id="number" placeholder="Phone Number">
-                    <input type="text" name="text" id="text" placeholder="Subject">
+                    <input type="number" name="phone" id="phone" placeholder="Phone">
+                    <input type="text" name="subject" id="subject" placeholder="Subject">
                 </div>
                 <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
                 <input type="submit" value="Send Message" class="btn">
@@ -232,20 +233,5 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
         <script src="https://unpkg.com/scrollreveal"></script>
         <script src="js/script.js"></script>
-        <script src="https://smtpjs.com/v3/smtp.js">
-            function sendEmail() {
-                    Email.send({
-                    Host : "smtp.gmail.com",
-                    Username : "saylihidayatrusdy@gmail.com",
-                    Password : "16081999Il",
-                    To : 'ilyas@undiksha.ac.id',
-                    From : document.getElementById('email').value,
-                    Subject : "This is the subject",
-                    Body : "And this is the body"
-                }).then(
-                message => alert(message)
-                );   
-            }
-        </script>
     </body>
 </html>

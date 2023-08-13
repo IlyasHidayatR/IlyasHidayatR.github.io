@@ -66,20 +66,19 @@ var typed = new Typed('.typing', {
 
 
 // contact form
-const scriptURL = 'https://smtpjs.com/v3/smtp.js'
+function sendWhastapp() {
+    // phone number
+    let number = '+6285883415570';
 
-function sendEmail() {
-    Email.send({
-        Host : "smtp.gmail.com",
-        Username : "saylihidayatrusdy@gmail.com",
-        Password : "16081999Il",
-        To : 'ilyas@undiksha.ac.id',
-        From : document.getElementById('email').value,
-        Subject : "This is the subject",
-        Body : "And this is the body"
-    }).then(
-      message => alert(message)
-    );
+    let name = document.getElementById('name').value;
+    let email = document.getElementById('email').value;
+    let phone = document.getElementById('phone').value;
+    let subject = document.getElementById('subject').value;
+    let message = document.getElementById('message').value;
+
+    let url = 'https://wa.me/' + number + '?text=' + 'Name: ' + name + '%0AEmail: ' + email + '%0APhone: ' + phone + '%0ASubject: ' + subject + '%0AMessage: ' + message;
+
+    window.open(url, '_blank').focus();
 }
 
 // form.addEventListener('submit', (e) => {

@@ -509,6 +509,7 @@ span{
     color: var(--text-color);
     margin-top: 1rem;
     margin-bottom: 2rem;
+    text-align: center;
 }
 
 .service-box i{
@@ -656,6 +657,8 @@ span{
 
     .service-box p{
         font-size: 1rem;
+        /* center */
+        text-align: center;
     }
 
     .service-box i{
@@ -762,6 +765,7 @@ span{
 
     .service-box p{
         font-size: 1.4rem;
+        text-align: center;
     }
 
     .service-box i{
@@ -799,10 +803,11 @@ span{
 
     .service-box p{
         font-size: 1rem;
+        text-align: center;
     }
 
-    i{
-        font-size: 3rem;
+    .service-box i{
+        font-size: 2rem;
     }
 }
 
