@@ -35,7 +35,7 @@ window.onscroll = () => {
 
 // ScrollReveal Animation
 const sr = ScrollReveal({
-    reset: true,
+    reset: false,
     delay: 200,
     origin: 'top',
     distance: '80px',
