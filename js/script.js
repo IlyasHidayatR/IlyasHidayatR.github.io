@@ -142,7 +142,6 @@ function sendEmail() {
               '&body=' + encodeURIComponent('Name: ' + name + '\n' +
                                             'Email: ' + email + '\n' +
                                             'Phone: ' + phone + '\n' +
-                                            'Subject: ' + subject + '\n' +
                                             'Message:\n' + message);
  
     // Membuka aplikasi email dengan URL mailto
