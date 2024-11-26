@@ -70,8 +70,8 @@
             <div class="about-content">
                 <h2 class="heading">About <span>Me</span></h2>
                 <h3>Programmer</h3>
-                <p class="max-desc">I am a graduate student from Ganesha University of Education located in North Bali. The Study Program I took was Computer Science. My expertise is building web applications with the Laravel framework and creating machine learning. The programming languages I master are python, PHP, CSS, HTML, C, and C++.</p>
-                <a href="https://www.linkedin.com/in/ilyas-hidayat-rusdy-a3baa91a7/" class="btn">Read More</a>
+                <p class="max-desc" id="description">I am a graduate student from Ganesha University of Education located in North Bali. The Study Program I took was Computer Science. My expertise is building web applications with the Laravel framework and creating machine learning. The programming languages I master are python, PHP, CSS, HTML, C, and C++.</p>
+                <a href="#" id="toggleButton" class="btn">Read More</a>
             </div>
         </section>
 
@@ -82,42 +82,42 @@
                     <h3>Python</h3>
                     <a href="https://www.sololearn.com/certificates/CT-TKHIV0JV" class="btn">Certification</a>
                     <div class="progress">
-                        <div class="progress-bar" style="width: 85%;"></div>
+                        <div class="progress-bar" data-target="85"></div>
                     </div>
                 </div>
                 <div class="skills-box">
                     <h3>C++</h3>
                     <a href="https://www.sololearn.com/certificates/CT-K94CO9DL" class="btn">Certification</a>
                     <div class="progress">
-                        <div class="progress-bar" style="width: 80%;"></div>
+                        <div class="progress-bar" data-target="80"></div>
                     </div>
                 </div>
                 <div class="skills-box">
                     <h3>JavaScript</h3>
                     <a href="https://www.sololearn.com/certificates/CC-DCIKYAOH" class="btn">Certification</a>
                     <div class="progress">
-                        <div class="progress-bar" style="width: 70%;"></div>
+                        <div class="progress-bar" data-target="70"></div>
                     </div>
                 </div>
                 <div class="skills-box">
                     <h3>PHP</h3>
                     <a href="https://www.sololearn.com/certificates/CC-9U22NYCK" class="btn">Certification</a>
                     <div class="progress">
-                        <div class="progress-bar" style="width: 60%;"></div>
+                        <div class="progress-bar" data-target="60"></div>
                     </div>
                 </div>
                 <div class="skills-box">
                     <h3>MySQL</h3>
                     <a href="https://www.sololearn.com/certificates/CC-N9XXRBFH" class="btn">Certification</a>
                     <div class="progress">
-                        <div class="progress-bar" style="width: 50%;"></div>
+                        <div class="progress-bar" data-target="50"></div>
                     </div>
                 </div>
                 <div class="skills-box">
                     <h3>Java</h3>
                     <a href="https://drive.google.com/file/d/1FiFSwnWqW_HqeKysKy6MqO6xV_fizY2l/view?usp=sharing" class="btn">Certification</a>
                     <div class="progress">
-                        <div class="progress-bar" style="width: 40%;"></div>
+                        <div class="progress-bar" data-target="40"></div>
                     </div>
                 </div>
             </div>
@@ -221,7 +221,7 @@
         <section class="contact" id="contact">
             <h2 class="heading">Contact <span>Me</span></h2>
 
-            <form onsubmit="sendWhastapp(); reset(); return false;">
+            <form onsubmit="sendEmail(); reset(); return false;">
                 <div class="input-box">
                     <input type="text" name="name" id="name" placeholder="Name">
                     <input type="email" name="email" id="email" placeholder="Email">
