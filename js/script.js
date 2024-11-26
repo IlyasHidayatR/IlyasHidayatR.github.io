@@ -139,11 +139,11 @@ function sendEmail() {
     // Membuat URL mailto dengan parameter untuk subjek dan body
     let url = 'mailto:' + emailRecipient + 
               '?subject=' + encodeURIComponent('Subject: ' + subject) + 
-              '&body=' + encodeURIComponent('Name: ' + name + 
-                                            '%0D%0AEmail: ' + email + 
-                                            '%0D%0APhone: ' + phone + 
-                                            '%0D%0ASubject: ' + subject + 
-                                            '%0D%0AMessage: ' + message);
+              '&body=' + encodeURIComponent('Name: ' + name + '\n' +
+                                            'Email: ' + email + '\n' +
+                                            'Phone: ' + phone + '\n' +
+                                            'Subject: ' + subject + '\n' +
+                                            'Message:\n' + message);
  
     // Membuka aplikasi email dengan URL mailto
     window.location.href = url;
