@@ -411,6 +411,24 @@ span{
     color: var(--second-bg-color);
 }
 
+.tooltip {
+    position: absolute;
+    top: -2rem; /* Tempatkan di atas progress bar */
+    left: 50%; /* Pusatkan secara horizontal */
+    transform: translateX(-50%); /* Pusatkan tooltip */
+    background-color: rgba(0, 0, 0, 0.7); /* Warna latar belakang */
+    padding: 0.5rem 0.7rem; /* Padding */
+    border-radius: 0.4rem; /* Sudut membulat */
+    white-space: nowrap; /* Mencegah teks terputus */
+    display: none; /* Sembunyikan secara default */
+    z-index: 10; /* Pastikan di atas elemen lain */
+}
+
+.skills-box:hover .tooltip {
+    display: block;
+    color: #fff; /* Warna teks */
+}
+
 .projects{
     display: flex;
     justify-content: center;

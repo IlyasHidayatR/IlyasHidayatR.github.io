@@ -76,6 +76,7 @@ sr.reveal('.skills-box', {
 // Fungsi untuk animasi progress bar
 function animateProgressBar(progressBar, targetWidth) {
     let width = 0;
+    const tooltip = progressBar.querySelector('.tooltip'); // Ambil elemen tooltip
 
     const interval = setInterval(() => {
         if (width >= targetWidth) {
@@ -83,6 +84,7 @@ function animateProgressBar(progressBar, targetWidth) {
         } else {
             width++;
             progressBar.style.width = width + '%';
+            tooltip.textContent = width + '%'; // Perbarui teks tooltip
         }
     }, 20); // Sesuaikan kecepatan animasi di sini
 }
@@ -138,10 +140,10 @@ function sendEmail() {
     let url = 'mailto:' + emailRecipient + 
               '?subject=' + encodeURIComponent('Subject: ' + subject) + 
               '&body=' + encodeURIComponent('Name: ' + name + 
-                                             '%0AEmail: ' + email + 
-                                             '%0APhone: ' + phone + 
-                                             '%0ASubject: ' + subject + 
-                                             '%0AMessage: ' + message);
+                                            '%0D%0AEmail: ' + email + 
+                                            '%0D%0APhone: ' + phone + 
+                                            '%0D%0ASubject: ' + subject + 
+                                            '%0D%0AMessage: ' + message);
  
     // Membuka aplikasi email dengan URL mailto
     window.location.href = url;
